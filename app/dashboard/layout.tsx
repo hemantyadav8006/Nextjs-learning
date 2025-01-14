@@ -28,10 +28,10 @@ const LayoutPage: React.FC<DashboardLayoutPageProps> = (props) => {
               <Link href="/dashboard">Dashboard</Link>
             </li>
             <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
-              <Link href="/dashboard/todos"> Todos </Link>
+              <Link href="/dashboard/profile"> Profile </Link>
             </li>
             <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
-              <Link href="/dashboard/profile"> Profile </Link>
+              <Link href="/dashboard/todos"> Todos </Link>
             </li>
             <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
               <Link href="/dashboard/user"> Users </Link>
@@ -44,7 +44,7 @@ const LayoutPage: React.FC<DashboardLayoutPageProps> = (props) => {
             </li>
           </ul>
         </div>
-        <div className="max-h-screen w-full text-white p-4 overflow-auto">
+        <div className="max-h-screen w-full p-4 overflow-auto">
           {props.children}
         </div>
       </div>

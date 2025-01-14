@@ -3,6 +3,11 @@ async function getAllTodos() {
   return await response.json();
 }
 
+export const preloadTodos = async () => {
+  console.log("Todos Page Data is fetching...");
+  void getAllTodos();
+};
+
 const TodosPage = async () => {
   const todos = await getAllTodos();
   return (
