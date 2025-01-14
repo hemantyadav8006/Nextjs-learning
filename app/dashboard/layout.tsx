@@ -23,7 +23,7 @@ const LayoutPage: React.FC<DashboardLayoutPageProps> = (props) => {
       </nav>
       <div className="flex">
         <div className="min-h-[100vh] w-[15vw] bg-gray-700">
-          <ul className="flex flex-col p-10 h-full">
+          <ul className="flex flex-col p-10 h-full text-white">
             <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
               <Link href="/dashboard">Dashboard</Link>
             </li>
@@ -44,7 +44,9 @@ const LayoutPage: React.FC<DashboardLayoutPageProps> = (props) => {
             </li>
           </ul>
         </div>
-        <div className="min-h-[100vh] text-white p-4">{props.children}</div>
+        <div className="max-h-screen w-full text-white p-4 overflow-auto">
+          {props.children}
+        </div>
       </div>
     </>
   );
