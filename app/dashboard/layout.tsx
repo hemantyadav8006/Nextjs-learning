@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface DashboardLayoutPageProps {
   children: React.ReactNode;
@@ -24,16 +25,22 @@ const LayoutPage: React.FC<DashboardLayoutPageProps> = (props) => {
         <div className="min-h-[100vh] w-[15vw] bg-gray-700">
           <ul className="flex flex-col p-10 h-full">
             <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
-              Dashboard
+              <Link href="/dashboard">Dashboard</Link>
             </li>
             <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
-              Credits
+              <Link href="/dashboard/todos"> Todos </Link>
             </li>
             <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
-              Profile
+              <Link href="/dashboard/profile"> Profile </Link>
             </li>
             <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
-              Settings
+              <Link href="/dashboard/user"> Users </Link>
+            </li>
+            <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
+              <Link href="/dashboard/settings"> Settings </Link>
+            </li>
+            <li className="pt-5 font-bold text-xl font-sans drop-shadow-lg">
+              <Link href="/dashboard/api"> Api Calling </Link>
             </li>
           </ul>
         </div>
